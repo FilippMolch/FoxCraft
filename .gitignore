@@ -30,3 +30,9 @@
 *.exe
 *.out
 *.app
+
+x64/
+
+FoxCraft.sln
+FoxCraft.vcxproj.user
+FoxCraft.vcxproj.filters
