@@ -45,17 +45,16 @@ int main(){
 	glEnable(GL_BLEND);
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
-	Shader shader("shaders/glsl.frag", "shaders/glsl.vert");
+	Shader shader("shaders/skybox.frag", "shaders/skybox.vert");
 	shader.compile();
 
-	Shader shader2("shaders/glsl2.frag", "shaders/glsl2.vert");
+	Shader shader2("shaders/chunk.frag", "shaders/chunk.vert");
 	shader2.compile();
 
 	RenderChunk renderer(1024 * 1024 * 8);
 	Chunk* chunk = new Chunk();
 	Mesh* mesh = renderer.render(chunk);
 
-	//TextureClass texture("textures\\1.jpg", TEXTURE_RGB);
 
 	vector<string> faces = {
 		"textures\\right.jpg",
@@ -68,6 +67,8 @@ int main(){
 
 	Mesh cubeMesh(Mesh::vectorVercitesAndTexCoordsToMash(coords::verticesForCube, coords::verticesForCube), Mesh::getIndices(coords::verticesForCube));
 
+
+	TextureClass tex("textures\\2.png", TEXTURE_RGBA);
 	unsigned int cube = TextureClass::loadCubemap(faces);
 
 	glm::mat4 model(1.0f);
@@ -93,7 +94,7 @@ int main(){
 		shader2.use();
 		shader2.setMat4("projView", cam.getProj(width, height) * cam.getLookAt(false));
 		shader2.setMat4("model", glm::mat4(1.0f));
-		//texture.bind();
+		tex.bind();
 		mesh->draw2(GL_TRIANGLES);
 
 		window.PollEvents();

@@ -11,7 +11,10 @@ Chunk::Chunk(){
 				int id = y <= (sin(x * 0.3f) * 0.5f + 0.5f) * 10;
 
 				//cout << "X: " << x << " Y: " << y << " Z: " << z << endl;
-				voxels[(y * CHUNKSIZE_D + z) * CHUNKSIZE_W + x].id = 1;
+				
+				//cout << (y * CHUNKSIZE_D + z) * CHUNKSIZE_W + x << endl;
+				
+				voxels[(y * CHUNKSIZE_D + z) * CHUNKSIZE_W + x].id = 140;
 
 				
 			}

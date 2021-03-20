@@ -16,9 +16,7 @@ enum TextureType {
 class TextureClass
 {
 private:
-	int width, height, nrChannels;
-
-	unsigned char* data;
+	//unsigned char *data;
 	unsigned int texture;
 public:
 	
