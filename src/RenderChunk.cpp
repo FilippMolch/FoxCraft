@@ -34,7 +34,7 @@ Mesh* RenderChunk::render(Chunk* chunk){
 				float l;
 				float uvsize = 1.0f / 16.0f;
 				float u = (id % 16) * uvsize;
-				float v = 1 - ((1 + id / 16) * uvsize);
+				float v = 1 - ((1 + id / 16.0f) * uvsize);
 
 				if (!IS_BLOCKED(x, y + 1, z)) {
 					l = 1.0f;

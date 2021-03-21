@@ -6,6 +6,7 @@ Window::Window(unsigned int width, unsigned int height, string name, bool resiza
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 5);
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+	//glfwWindowHint(GLFW_DECORATED, 0);
 
 	if (!resizable)
 		glfwWindowHint(GLFW_RESIZABLE, NULL);
@@ -26,14 +27,6 @@ Window::Window(unsigned int width, unsigned int height, string name, bool resiza
 	}
 
 	glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
-
-	FT_Library ft;
-
-	// Всякий раз, когда возникает ошибка, функции будут возвращать отличное от нуля значение
-	if (FT_Init_FreeType(&ft))
-	{
-		std::cout << "ERROR::FREETYPE: Could not init FreeType Library" << std::endl;
-	}
 
 }
 

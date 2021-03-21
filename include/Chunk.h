@@ -12,7 +12,7 @@ using namespace std;
 #define CHUNKSIZE_D 16
 
 struct voxel {
-	uint8_t id;
+	unsigned int id;
 };
 
 class Chunk
