@@ -14,7 +14,7 @@
 
 using namespace std;
 
-glm::vec3 cameraPos = glm::vec3(0.0f, 0.0f, 3.0f);
+glm::vec3 cameraPos = glm::vec3(8.0f, 255.0f, 8.0f);
 glm::vec3 cameraFront = glm::vec3(0.0f, 0.0f, -1.0f);
 glm::vec3 cameraUp = glm::vec3(0.0f, 1.0f, 0.0f);
 
@@ -34,8 +34,8 @@ void mouse_callback(GLFWwindow* window, double xpos, double ypos){
 
 int main(){
 
-	width = 1020;
-	height = 720;
+	width = 1920;
+	height = 1080;
 
 	Window window(width, height, "FoxCraft", false);
 
@@ -70,12 +70,9 @@ int main(){
 	};
 
 	Mesh cubeMesh(Mesh::vectorVercitesAndTexCoordsToMash(coords::verticesForCube, coords::verticesForCube), Mesh::getIndices(coords::verticesForCube));
-	
 	Mesh sun(Mesh::vectorVercitesAndTexCoordsToMash(coords::verticesForCube, coords::verticesForCube), Mesh::getIndices(coords::verticesForCube));
 
-
 	TextureClass tex("textures\\blocks\\2.png", TEXTURE_RGBA);
-
 	TextureClass sunTex("textures\\lights\\sun.png", TEXTURE_RGBA);
 
 	unsigned int cube = TextureClass::loadCubemap(faces);
@@ -87,7 +84,7 @@ int main(){
 
 	glm::mat4 sunModel(1.0f);
 	sunModel = glm::scale(sunModel, glm::vec3(30.f, 30.f, 30.f));
-	sunModel = glm::translate(sunModel, glm::vec3(17.f, 17.f, 0.f));
+	sunModel = glm::translate(sunModel, glm::vec3(14.f, 14.f, 0.f));
 
 	while (!window.windowShouldClose())
 	{
@@ -116,7 +113,7 @@ int main(){
 		mesh->draw2(GL_TRIANGLES);
 		
 		sunShader.use();
-		sunShader.setMat4("projView", cam.getProj(width, height) * cam.getLookAt(false));
+		sunShader.setMat4("projView", cam.getProj(width, height) * cam.getLookAt(true));
 		sunShader.setMat4("model", sunModel);
 		sunTex.bind();
 		sun.draw();
@@ -134,9 +131,9 @@ int main(){
 						  + " Z: " + to_string(cam.Up.z);
 
 
-		text.draw(camCoords, 15.0f, 695.0f - 15.0f, 1.0f, glm::vec3(1.0, 1.0f, 1.0f));
-		text.draw(frontCoords, 15.0f, 695.0f - 45.0f, 1.0f, glm::vec3(1.0, 1.0f, 1.0f));
-		text.draw(upCoords, 15.0f, 695.0f - 75.0f, 1.0f, glm::vec3(1.0, 1.0f, 1.0f));
+		text.draw(camCoords, 15.0f, height - 15.0f - 15.0f, 1.0f, glm::vec3(1.0, 1.0f, 1.0f), width, height);
+		text.draw(frontCoords, 15.0f, height - 15.0f - 45.0f, 1.0f, glm::vec3(1.0, 1.0f, 1.0f), width, height);
+		text.draw(upCoords, 15.0f, height - 15.0f - 75.0f, 1.0f, glm::vec3(1.0, 1.0f, 1.0f), width, height);
 
 		window.PollEvents();
 		window.SwapBuffers();

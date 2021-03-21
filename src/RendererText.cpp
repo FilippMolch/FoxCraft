@@ -83,13 +83,13 @@ RendererText::RendererText(string fontPath){
 
 }
 
-void RendererText::draw(string text, float xText, float yText, float scale, glm::vec3 color){
+void RendererText::draw(string text, float xText, float yText, float scale, glm::vec3 color, unsigned int width, unsigned int height){
     s->compile();
 
 	s->use();
 
 
-    glm::mat4 projection = glm::ortho(0.0f, 1020.f, 0.0f, 720.f);
+    glm::mat4 projection = glm::ortho(0.0f, float(width), 0.0f, float(height));
 
     s->setMat4("projection", projection);
 

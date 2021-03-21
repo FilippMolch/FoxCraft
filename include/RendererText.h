@@ -27,7 +27,7 @@ private:
     
     map<char, Character> Characters;
 public:
-    void draw(string text, float xText, float yText, float scale, glm::vec3 color);
+    void draw(string text, float xText, float yText, float scale, glm::vec3 color, unsigned int width, unsigned int height);
 
     RendererText(string fontPath);
     ~RendererText();

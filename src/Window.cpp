@@ -6,7 +6,7 @@ Window::Window(unsigned int width, unsigned int height, string name, bool resiza
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 5);
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
-	//glfwWindowHint(GLFW_DECORATED, 0);
+	glfwWindowHint(GLFW_DECORATED, 0);
 
 	if (!resizable)
 		glfwWindowHint(GLFW_RESIZABLE, NULL);
