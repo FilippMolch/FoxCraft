@@ -20,7 +20,7 @@ private:
 	unsigned int texture;
 public:
 	
-	TextureClass(string name, TextureType type);
+	TextureClass(string name, TextureType type, bool flip);
 	~TextureClass();
 
 	static unsigned int loadCubemap(vector<std::string> faces);

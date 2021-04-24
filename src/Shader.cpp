@@ -95,7 +95,7 @@ void Shader::deleteProgramm(){
 }
 
 Shader::~Shader(){
-	glDeleteProgram(ID);
+	//glDeleteProgram(ID);
 }
 
 void Shader::setVec3(string name, float value, float value2, float value3){

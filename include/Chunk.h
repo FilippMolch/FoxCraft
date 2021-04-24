@@ -4,6 +4,7 @@
 #define CHUNKCLASS
 
 #include <all.h>
+#include <ChunkLightMap.h>
 
 using namespace std;
 
@@ -19,9 +20,15 @@ class Chunk
 {
 private:
 public:
-	voxel* voxels = new voxel[CHUNKSIZE_W * CHUNKSIZE_H * CHUNKSIZE_D];
+	int x, y, z;
+	voxel* voxels;
 
-	Chunk();
+	ChunkLightMap* lightmap;
+
+	bool modified = true;
+
+	Chunk(int xpos, int ypos, int zpos);
+	Chunk(int xpos, int ypos, int zpos, bool perlin);
 	~Chunk();
 };
 

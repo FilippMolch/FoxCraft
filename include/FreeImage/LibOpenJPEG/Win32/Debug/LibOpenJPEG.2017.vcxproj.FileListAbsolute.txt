@@ -1,0 +1,1 @@
+C:\Users\Filipp\Desktop\FreeImage\Source\LibOpenJPEG\Win32\Debug\LibOpenJPEG.lib

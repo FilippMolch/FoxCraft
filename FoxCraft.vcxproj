@@ -94,7 +94,7 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>C:\Users\Filipp\source\repos\FoxCraft\FoxCraft\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>opengl32.lib;glfw3.lib;freetype.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>opengl32.lib;glfw3.lib;freetype.lib;noise.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -113,7 +113,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>C:\Users\Filipp\source\repos\FoxCraft\FoxCraft\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>opengl32.lib;glfw3.lib;freetype.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>opengl32.lib;glfw3.lib;freetype.lib;noise.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -128,7 +128,7 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>C:\Users\Filipp\source\repos\FoxCraft\FoxCraft\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>opengl32.lib;glfw3.lib;freetype.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>opengl32.lib;glfw3.lib;freetype.lib;noise.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -147,14 +147,24 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>C:\Users\Filipp\source\repos\FoxCraft\FoxCraft\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>opengl32.lib;glfw3.lib;freetype.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>opengl32.lib;glfw3.lib;freetype.lib;noise.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\GamePlay.cpp" />
+    <ClCompile Include="include\LightClass.h" />
+    <ClCompile Include="src\Block.cpp" />
+    <ClCompile Include="src\ChunkLightMap.cpp" />
+    <ClCompile Include="src\Light.cpp" />
+    <ClCompile Include="src\LightClass.cpp" />
+    <ClCompile Include="src\LineClass.cpp" />
+    <ClCompile Include="src\PerlinNoiseInVector.cpp" />
+    <ClCompile Include="src\FrameBuffer.cpp" />
+    <ClCompile Include="src\Chunk.cpp" />
+    <ClCompile Include="src\noiseutils.cpp" />
     <ClCompile Include="src\RendererText.cpp" />
     <ClCompile Include="src\Chunks.cpp" />
     <ClCompile Include="src\Camera.cpp" />
-    <ClCompile Include="src\Chunk.cpp" />
     <ClCompile Include="src\glad.c" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\Mash.cpp" />
@@ -165,18 +175,25 @@
     <ClCompile Include="src\WindowEvents.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\Block.h" />
+    <ClInclude Include="include\ChunkLightMap.h" />
+    <ClInclude Include="include\FrameBuffer.h" />
     <ClInclude Include="include\Chunks.h" />
     <ClInclude Include="include\all.h" />
     <ClInclude Include="include\Camera.h" />
     <ClInclude Include="include\Chunk.h" />
     <ClInclude Include="include\Coords.h" />
+    <ClInclude Include="include\Light.h" />
     <ClInclude Include="include\Mash.h" />
+    <ClInclude Include="include\noiseutils.h" />
     <ClInclude Include="include\RenderChunk.h" />
     <ClInclude Include="include\Shader.h" />
     <ClInclude Include="include\Window.h" />
     <ClInclude Include="include\Texture.h" />
     <ClInclude Include="include\RendererText.h" />
     <ClInclude Include="include\WindowEvents.h" />
+    <ClInclude Include="include\PerlinNoiseInVector.h" />
+    <ClInclude Include="include\LineClass.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

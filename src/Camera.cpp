@@ -51,33 +51,42 @@ void Camera::mouseCallBack(GLFWwindow* window, double xpos, double ypos){
 
 }
 
-void Camera::keyboardCallBack(GLFWwindow* win){
+void Camera::keyboardCallBack(Event& eve){
  
     float currentFrame = glfwGetTime();
     deltaTime = currentFrame - lastFrame;
     lastFrame = currentFrame;
 
-    glm::vec3 Front2 = Front;
-    if (Front.x < 0)
-        Front2.x = -1.0f;
-    if (Front.x > 0)
-        Front2.x = 1.0f;
+    for (int i = 0; i < eve.keyboard.buttons.size(); i++)
+    {
+        switch (eve.keyboard.buttons[i])
+        {
+        case KEY_W:
+            Position += Front * CAM_SPEED;
+            break;
+        case KEY_A:
+            Position -= glm::normalize(glm::cross(Front, Up)) * CAM_SPEED;
+            break;
+        case KEY_S:
+            Position -= glm::normalize(Front) * CAM_SPEED;
+            break;
+        case KEY_D:
+            Position += glm::normalize(glm::cross(Front, Up)) * CAM_SPEED;
+            break;
 
-    CAM_SPEED = 2.5f * deltaTime;
-    if (glfwGetKey(win, GLFW_KEY_LEFT_SHIFT) == GLFW_PRESS)
-        CAM_SPEED = 10.0f * deltaTime;
-    if (glfwGetKey(win, GLFW_KEY_LEFT_SHIFT) != GLFW_PRESS)
-        CAM_SPEED = 2.5 * deltaTime;
-    if (glfwGetKey(win, GLFW_KEY_W) == GLFW_PRESS)  
-        Position += Front * CAM_SPEED;
-    if (glfwGetKey(win, GLFW_KEY_S) == GLFW_PRESS)
-        Position -= glm::normalize(Front) * CAM_SPEED;
-    if (glfwGetKey(win, GLFW_KEY_A) == GLFW_PRESS)
-        Position -= glm::normalize(glm::cross(Front, Up)) * CAM_SPEED;
-    if (glfwGetKey(win, GLFW_KEY_D) == GLFW_PRESS)
-        Position += glm::normalize(glm::cross(Front, Up)) * CAM_SPEED;
+        default:
+            break;
+        }
 
-   // Position.y = 255.f;
+        if (eve.keyboard.buttons[i] == KEY_LEFT_CONTROL)
+            CAM_SPEED = 9.5 * deltaTime;
+        else
+            CAM_SPEED = 5.5 * deltaTime;
+    }
+
+    //CAM_SPEED = 2.5 * deltaTime;
+
+
 }
 
 glm::mat4 Camera::getLookAt(bool trig){

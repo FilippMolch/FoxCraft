@@ -1,0 +1,120 @@
+﻿  FrameBuffer.cpp
+  Chunk.cpp
+  RendererText.cpp
+C:\Users\Filipp\source\repos\FoxCraft\FoxCraft\src\RendererText.cpp(63,33): warning C4838: conversion from 'FT_Pos' to 'unsigned int' requires a narrowing conversion
+  Chunks.cpp
+C:\Users\Filipp\source\repos\FoxCraft\FoxCraft\src\Chunks.cpp(21,35): warning C4018: '>=': signed/unsigned mismatch
+C:\Users\Filipp\source\repos\FoxCraft\FoxCraft\src\Chunks.cpp(21,45): warning C4018: '>=': signed/unsigned mismatch
+C:\Users\Filipp\source\repos\FoxCraft\FoxCraft\src\Chunks.cpp(21,55): warning C4018: '>=': signed/unsigned mismatch
+C:\Users\Filipp\source\repos\FoxCraft\FoxCraft\src\Chunks.cpp(33,39): warning C4018: '>=': signed/unsigned mismatch
+C:\Users\Filipp\source\repos\FoxCraft\FoxCraft\src\Chunks.cpp(33,50): warning C4018: '>=': signed/unsigned mismatch
+C:\Users\Filipp\source\repos\FoxCraft\FoxCraft\src\Chunks.cpp(33,61): warning C4018: '>=': signed/unsigned mismatch
+C:\Users\Filipp\source\repos\FoxCraft\FoxCraft\src\Chunks.cpp(49,39): warning C4018: '>=': signed/unsigned mismatch
+C:\Users\Filipp\source\repos\FoxCraft\FoxCraft\src\Chunks.cpp(49,50): warning C4018: '>=': signed/unsigned mismatch
+C:\Users\Filipp\source\repos\FoxCraft\FoxCraft\src\Chunks.cpp(49,61): warning C4018: '>=': signed/unsigned mismatch
+C:\Users\Filipp\source\repos\FoxCraft\FoxCraft\src\Chunks.cpp(77,9): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Filipp\source\repos\FoxCraft\FoxCraft\src\Chunks.cpp(78,9): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Filipp\source\repos\FoxCraft\FoxCraft\src\Chunks.cpp(79,9): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Filipp\source\repos\FoxCraft\FoxCraft\src\Chunks.cpp(108,13): warning C4244: '=': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Filipp\source\repos\FoxCraft\FoxCraft\src\Chunks.cpp(109,13): warning C4244: '=': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Filipp\source\repos\FoxCraft\FoxCraft\src\Chunks.cpp(110,13): warning C4244: '=': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Filipp\source\repos\FoxCraft\FoxCraft\src\Chunks.cpp(120,16): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
+C:\Users\Filipp\source\repos\FoxCraft\FoxCraft\src\Chunks.cpp(126,16): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
+C:\Users\Filipp\source\repos\FoxCraft\FoxCraft\src\Chunks.cpp(134,16): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
+C:\Users\Filipp\source\repos\FoxCraft\FoxCraft\src\Chunks.cpp(140,16): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
+C:\Users\Filipp\source\repos\FoxCraft\FoxCraft\src\Chunks.cpp(147,11): warning C4244: '=': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Filipp\source\repos\FoxCraft\FoxCraft\src\Chunks.cpp(148,11): warning C4244: '=': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Filipp\source\repos\FoxCraft\FoxCraft\src\Chunks.cpp(149,11): warning C4244: '=': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Filipp\source\repos\FoxCraft\FoxCraft\src\Chunks.cpp(160,20): warning C4018: '<': signed/unsigned mismatch
+  Camera.cpp
+C:\Users\Filipp\source\repos\FoxCraft\FoxCraft\src\Camera.cpp(28,17): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Filipp\source\repos\FoxCraft\FoxCraft\src\Camera.cpp(29,17): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Filipp\source\repos\FoxCraft\FoxCraft\src\Camera.cpp(33,19): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Filipp\source\repos\FoxCraft\FoxCraft\src\Camera.cpp(34,19): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Filipp\source\repos\FoxCraft\FoxCraft\src\Camera.cpp(35,19): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Filipp\source\repos\FoxCraft\FoxCraft\src\Camera.cpp(36,19): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Filipp\source\repos\FoxCraft\FoxCraft\src\Camera.cpp(38,29): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\Filipp\source\repos\FoxCraft\FoxCraft\src\Camera.cpp(56,24): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Filipp\source\repos\FoxCraft\FoxCraft\src\Camera.cpp(60,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Filipp\source\repos\FoxCraft\FoxCraft\src\Camera.cpp(82,29): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Filipp\source\repos\FoxCraft\FoxCraft\src\Camera.cpp(84,29): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  main.cpp
+C:\Users\Filipp\source\repos\FoxCraft\FoxCraft\src\main.cpp(98,28): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\Filipp\source\repos\FoxCraft\FoxCraft\src\main.cpp(116,23): warning C4244: 'argument': conversion from 'float' to 'unsigned int', possible loss of data
+C:\Users\Filipp\source\repos\FoxCraft\FoxCraft\src\main.cpp(116,16): warning C4244: 'argument': conversion from 'float' to 'unsigned int', possible loss of data
+C:\Users\Filipp\source\repos\FoxCraft\FoxCraft\src\main.cpp(158,24): warning C4244: 'argument': conversion from 'float' to 'unsigned int', possible loss of data
+C:\Users\Filipp\source\repos\FoxCraft\FoxCraft\src\main.cpp(158,17): warning C4244: 'argument': conversion from 'float' to 'unsigned int', possible loss of data
+C:\Users\Filipp\source\repos\FoxCraft\FoxCraft\src\main.cpp(175,50): warning C4244: 'argument': conversion from 'float' to 'unsigned int', possible loss of data
+C:\Users\Filipp\source\repos\FoxCraft\FoxCraft\src\main.cpp(175,43): warning C4244: 'argument': conversion from 'float' to 'unsigned int', possible loss of data
+C:\Users\Filipp\source\repos\FoxCraft\FoxCraft\src\main.cpp(215,51): warning C4244: 'argument': conversion from 'float' to 'unsigned int', possible loss of data
+C:\Users\Filipp\source\repos\FoxCraft\FoxCraft\src\main.cpp(215,44): warning C4244: 'argument': conversion from 'float' to 'unsigned int', possible loss of data
+C:\Users\Filipp\source\repos\FoxCraft\FoxCraft\src\main.cpp(239,97): warning C4244: 'argument': conversion from 'float' to 'unsigned int', possible loss of data
+C:\Users\Filipp\source\repos\FoxCraft\FoxCraft\src\main.cpp(239,90): warning C4244: 'argument': conversion from 'float' to 'unsigned int', possible loss of data
+C:\Users\Filipp\source\repos\FoxCraft\FoxCraft\src\main.cpp(240,99): warning C4244: 'argument': conversion from 'float' to 'unsigned int', possible loss of data
+C:\Users\Filipp\source\repos\FoxCraft\FoxCraft\src\main.cpp(240,92): warning C4244: 'argument': conversion from 'float' to 'unsigned int', possible loss of data
+C:\Users\Filipp\source\repos\FoxCraft\FoxCraft\src\main.cpp(241,96): warning C4244: 'argument': conversion from 'float' to 'unsigned int', possible loss of data
+C:\Users\Filipp\source\repos\FoxCraft\FoxCraft\src\main.cpp(241,89): warning C4244: 'argument': conversion from 'float' to 'unsigned int', possible loss of data
+C:\Users\Filipp\source\repos\FoxCraft\FoxCraft\src\main.cpp(256,92): warning C4244: 'argument': conversion from 'float' to 'unsigned int', possible loss of data
+C:\Users\Filipp\source\repos\FoxCraft\FoxCraft\src\main.cpp(256,85): warning C4244: 'argument': conversion from 'float' to 'unsigned int', possible loss of data
+  Mash.cpp
+C:\Users\Filipp\source\repos\FoxCraft\FoxCraft\src\Mash.cpp(80,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Filipp\source\repos\FoxCraft\FoxCraft\src\Mash.cpp(89,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Filipp\source\repos\FoxCraft\FoxCraft\src\Mash.cpp(98,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Filipp\source\repos\FoxCraft\FoxCraft\src\Mash.cpp(100,9): warning C4018: '>=': signed/unsigned mismatch
+C:\Users\Filipp\source\repos\FoxCraft\FoxCraft\src\Mash.cpp(112,20): warning C4018: '<': signed/unsigned mismatch
+  RenderChunk.cpp
+  Shader.cpp
+  Window.cpp
+C:\Users\Filipp\source\repos\FoxCraft\FoxCraft\src\Window.cpp(61,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Filipp\source\repos\FoxCraft\FoxCraft\src\Window.cpp(69,20): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\Filipp\source\repos\FoxCraft\FoxCraft\src\Window.cpp(70,20): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\Filipp\source\repos\FoxCraft\FoxCraft\src\Window.cpp(81,20): warning C4018: '<': signed/unsigned mismatch
+  Texture.cpp
+  WindowEvents.cpp
+  glad.c
+RendererText.obj : error LNK2001: unresolved external symbol _FT_New_Face
+RendererText.obj : error LNK2001: unresolved external symbol _FT_Done_FreeType
+RendererText.obj : error LNK2001: unresolved external symbol _FT_Done_Face
+RendererText.obj : error LNK2001: unresolved external symbol _FT_Init_FreeType
+RendererText.obj : error LNK2001: unresolved external symbol _FT_Load_Char
+RendererText.obj : error LNK2001: unresolved external symbol _FT_Set_Pixel_Sizes
+Camera.obj : error LNK2001: unresolved external symbol _glfwGetTime
+main.obj : error LNK2001: unresolved external symbol _glfwGetMouseButton
+main.obj : error LNK2001: unresolved external symbol _glfwTerminate
+Window.obj : error LNK2001: unresolved external symbol _glfwSwapBuffers
+Window.obj : error LNK2001: unresolved external symbol _glfwSwapInterval
+Window.obj : error LNK2001: unresolved external symbol _glfwGetKey
+Window.obj : error LNK2001: unresolved external symbol _glfwPollEvents
+Window.obj : error LNK2001: unresolved external symbol _glfwInit
+Window.obj : error LNK2001: unresolved external symbol _glfwCreateWindow
+Window.obj : error LNK2001: unresolved external symbol _glfwWindowHint
+Window.obj : error LNK2001: unresolved external symbol _glfwSetInputMode
+Window.obj : error LNK2001: unresolved external symbol _glfwMakeContextCurrent
+Window.obj : error LNK2001: unresolved external symbol _glfwGetProcAddress
+Window.obj : error LNK2001: unresolved external symbol _glfwGetCursorPos
+Window.obj : error LNK2001: unresolved external symbol _glfwWindowShouldClose
+C:\Users\Filipp\source\repos\FoxCraft\Release\FoxCraft.exe : fatal error LNK1120: 21 unresolved externals

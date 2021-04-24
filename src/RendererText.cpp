@@ -2,6 +2,7 @@
 
 RendererText::RendererText(string fontPath){
     s = new Shader("shaders\\text.frag", "shaders\\text.vert");
+    s->compile();
 
     this->fontPath = fontPath;
 
@@ -83,11 +84,9 @@ RendererText::RendererText(string fontPath){
 
 }
 
-void RendererText::draw(string text, float xText, float yText, float scale, glm::vec3 color, unsigned int width, unsigned int height){
-    s->compile();
-
+void RendererText::draw(string text, float xText, float yText, float scale, glm::vec3 color, unsigned int width, unsigned int height)
+{
 	s->use();
-
 
     glm::mat4 projection = glm::ortho(0.0f, float(width), 0.0f, float(height));
 
@@ -140,5 +139,4 @@ void RendererText::draw(string text, float xText, float yText, float scale, glm:
 
 RendererText::~RendererText() {
 	delete s;
-	
 }

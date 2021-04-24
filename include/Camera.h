@@ -3,6 +3,7 @@
 #define CAMERA
 
 #include <all.h>
+#include <Window.h>
 
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
@@ -32,11 +33,11 @@ public:
 	glm::vec3 WorldUp;
 
 	float FOV = 75.0f;
-	float CAM_SPEED = 2.5f;
+	float CAM_SPEED = 1.5f;
 
 	Camera(glm::vec3 Position, glm::vec3 Front, glm::vec3 Up);
 	void mouseCallBack(GLFWwindow* window, double xpos, double ypos);
-	void keyboardCallBack(GLFWwindow* win);
+	void keyboardCallBack(Event& eve);
 
 	glm::mat4 getLookAt(bool trig);
 	glm::mat4 getProj(unsigned int width, unsigned int height);

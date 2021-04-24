@@ -73,8 +73,6 @@ Mesh::Mesh(vector<Vertex> vercites, vector<unsigned int> indices, vector<texture
 }
 
 
-
-
 vector<Vertex> Mesh::vectorVercitesAndTexCoordsToMash(vector<float> vertices, vector<float> TexCoords){
 	Vertex v1;
 	vector<Vertex> vert, vert2;
@@ -96,8 +94,11 @@ vector<Vertex> Mesh::vectorVercitesAndTexCoordsToMash(vector<float> vertices, ve
 		vert2.push_back(v1);
 	}
 
+
 	for (int i = 0; i < vert.size(); i++)
 	{
+		if (i >= vert2.size())
+			break;
 		vert[i].TexCoords.x = vert2[i].TexCoords.x;
 		vert[i].TexCoords.y = vert2[i].TexCoords.y;
 	}
@@ -125,6 +126,7 @@ void Mesh::draw(){
 }
 
 void Mesh::draw2(unsigned int primitive) {
+
 	glBindVertexArray(VAO);
 	glBindBuffer(GL_ARRAY_BUFFER, VBO);
 

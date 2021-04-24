@@ -3,8 +3,11 @@
 #include <iostream>
 #include <thread>
 
-#include <stb-master\stb_image.h>
+#include <stb-master/stb_image.h>
+
 #define STB_IMAGE_IMPLEMENTATION
+
+
 
 #include <ft2build.h>
 #include FT_FREETYPE_H  
@@ -26,3 +29,7 @@
 #include <vector>
 
 #include <map>
+#include <time.h>
+
+#include <iomanip>
+#include <queue>

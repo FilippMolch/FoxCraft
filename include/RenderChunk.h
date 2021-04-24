@@ -12,11 +12,13 @@ using namespace std;
 class RenderChunk
 {
 private:
-	float* buffer;
+	
 	size_t capacity;
-
+	
 public:
-	Mesh* render(Chunk* chunk);
+	float* buffer;	
+
+	Mesh* render(Chunk* chunk, const Chunk** chunks);
 	RenderChunk(size_t capacity);
 	~RenderChunk();
 };

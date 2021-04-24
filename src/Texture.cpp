@@ -1,6 +1,6 @@
 #include "Texture.h"
 
-TextureClass::TextureClass(string name, TextureType type) {
+TextureClass::TextureClass(string name, TextureType type, bool flip) {
 	glGenTextures(1, &texture);
 	glBindTexture(GL_TEXTURE_2D, texture);
 
@@ -8,10 +8,14 @@ TextureClass::TextureClass(string name, TextureType type) {
 
 	//stbi_image_free(data);
 
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST_MIPMAP_LINEAR);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAX_LEVEL, 4);
+
+	if (flip)
+		stbi_set_flip_vertically_on_load(1);
+	else
+		stbi_set_flip_vertically_on_load(0);
 
 	int width, height, nrChannels;
 	unsigned char* data = stbi_load(name.c_str(), &width, &height, &nrChannels, 0);
